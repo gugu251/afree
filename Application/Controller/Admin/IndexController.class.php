@@ -13,7 +13,7 @@ class IndexController extends AdminController {
 
         $this->assign('title', '这是首页');
         $this->assign('news', $items);
-        $this->display('Admin/index.html');
+        $this->display('Admin/News/list.html');
     }
 
 }

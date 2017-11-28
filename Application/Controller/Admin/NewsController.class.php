@@ -12,20 +12,20 @@ class NewsController extends AdminController {
 
         $this->assign('title', '图文首页');
         $this->assign('news', $items);
-        $this->display('Admin/index.html');
+        $this->display('Admin/News/list.html');
     }
-    
+
     /**
      * 图文管理列表
      */
     public function newslist() {
-        $items = (new NewsModel)->getList(1);
 
+        $items = (new NewsModel)->getList($where,$page,$limit);
         $this->assign('title', '图文管理列表');
         $this->assign('news', $items);
-        $this->display('Admin/index.html');
+        $this->display('Admin/News/list.html');
     }
-    
+
     /**
      * 图文栏目管理列表
      */
@@ -34,10 +34,10 @@ class NewsController extends AdminController {
 
         $this->assign('title', '图文栏目管理列表');
         $this->assign('news', $items);
-        $this->display('Admin/index.html');
+        $this->display('Admin/News/list.html');
     }
 
-    
+
     /**
      * 图文评论管理列表
      */
@@ -46,7 +46,7 @@ class NewsController extends AdminController {
 
         $this->assign('title', '图文评论管理列表');
         $this->assign('news', $items);
-        $this->display('Admin/index.html');
+        $this->display('Admin/News/list.html');
     }
 
 

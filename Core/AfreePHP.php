@@ -17,6 +17,7 @@ require FRAME_PATH . 'Core.php';
 
 //加载模板
 require FRAME_PATH . 'Vendor/Smarty/Smarty.class.php';
+
 // 加载公共函数
 require APP_COMMON . 'functions.php';
 

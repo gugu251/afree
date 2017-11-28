@@ -11,11 +11,11 @@ class AdminmenuModel extends Model {
         $list  = $this->selectAll();
         $menus = array();
         foreach ($list as $key => $value) {
-            if ($value['adminmenu_pid'] > 0) {
-                $menus[$value['adminmenu_pid']]['son'][] = $value;
+            if ($value['pid'] > 0) {
+                $menus[$value['pid']]['son'][] = $value;
             } else {
-                $menus[$value['adminmenu_id']] = $value;
-                $menus[$value['adminmenu_id']]['son'] = array();
+                $menus[$value['id']] = $value;
+                $menus[$value['id']]['son'] = array();
             }
         }
 //        var_dump($menus);

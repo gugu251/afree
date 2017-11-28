@@ -23,6 +23,19 @@ function getAppName() {
 }
 
 /**
+ * 实例化一个没有模型文件的Model
+ * @param string $name Model名称 支持指定基础模型 例如 MongoModel:User
+ * @param string $tablePrefix 表前缀
+ * @param mixed $connection 数据库连接信息
+ * @return Think\Model
+ */
+function M($name='') {
+    $mm = new $name();
+    return $mm;
+}
+
+
+/**
  * 解析一个数组变量,将其各键值定义为常量
  * @param type $conf
  */
