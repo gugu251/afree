@@ -10,6 +10,16 @@ use Stichoza\GoogleTranslate\TranslateClient;
 
 class TranslateController extends Controller
 {
+    /**
+     * 翻译功能列表
+     */
+    public function index(){
+
+        $this->display('Tool/Translate/index.html');
+    }
+    /**
+     * html源码翻译
+     */
     public function fyHtml()
     {
         //引入文件
@@ -18,6 +28,7 @@ class TranslateController extends Controller
         $data = trim($_POST['content']);
         //语言
         $language = trim($_POST['language']);
+        $data = trim($_POST['content']);
         if ($data) {
             //正则匹配所有中文 仅限中文
             $list = preg_match_all("#(?:(?![，。？])[\xC0-\xFF][\x80-\xBF]+)+#", $data, $arr, PREG_PATTERN_ORDER);
@@ -39,6 +50,7 @@ class TranslateController extends Controller
             //去除重复
             $uniqueArr = array_unique($tmpArr);
 
+
             //语言
 //            $languageArr = array('en', 'ja', 'ko', 'fr', 'zh_Hant');
             $tr = new TranslateClient();
@@ -53,7 +65,35 @@ class TranslateController extends Controller
             $kk = str_replace($uniqueArr, $translate, $data);
 
         }
+        $this->assign('postcontent', $data);
+        $this->assign('title', 'html翻译');
+        $this->assign('content', $kk);
+        $this->display('Tool/Translate/fyhtml.html');
 
+    }
+
+    /**
+     * 文字翻译
+     */
+    public function fyWord()
+    {
+        //引入文件
+        require CORE_PATH . 'Vendor/Translate/autoload.php';
+        //翻译数据
+        $data = trim($_POST['content']);
+        //语言
+        $language = trim($_POST['language']);
+        $data = trim($_POST['content']);
+        if ($data) {
+
+            $tr = new TranslateClient();
+            $tr->setSource('zh');
+            $tr->setTarget($language);
+            $tr->setUrlBase('http://translate.google.cn/translate_a/single');
+            $kk = trim($tr->translate($data));
+
+        }
+        $this->assign('postcontent', $data);
         $this->assign('title', 'html翻译');
         $this->assign('content', $kk);
         $this->display('Tool/Translate/fyhtml.html');

@@ -1,4 +1,8 @@
 <?php
+//ini_set("display_errors","on");
+//error_reporting(E_ALL^E_NOTICE^E_DEPRECATED);
+//ini_set("display_errors","off");
+error_reporting(0);
 
 //PRC  中华人民共和国  上海的时区
 date_default_timezone_set("Asia/Shanghai");

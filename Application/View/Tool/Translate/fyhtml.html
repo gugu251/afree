@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title><!--{$title}--></title>
 </head>
 <body>
-
+<form action="" method="post">
+    <div class="">语言：
+        <select name="language">
+            <option selected="selected" value="en">英文</option>
+            <option value="ja">日文</option>
+            <option value="ko">韩文</option>
+            <option value="fr">法语</option>
+            <option value="zh_Hant">繁体</option>
+        </select></div>
+    <br/>
+    <textarea class="" rows="10" name="content" placeholder="输入翻译内容"><!--{$postcontent}--></textarea><br/>
+    <input type="submit" name=""><br/>
+    <br/>
+    <br/>
+    <!--{$content}-->
+</form>
 </body>
 </html>

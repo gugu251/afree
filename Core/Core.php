@@ -9,15 +9,17 @@ class Core {
 
     // 运行程序
     public function run() {
+        //获取程序名
         getAppName();
+        //加载运行类库
         spl_autoload_register(array($this, 'loadClass'));
-
+        //是否开启调试模式
         $this->setReporting();
-
+        //检测敏感字符并删除
         $this->removeMagicQuotes();
-
+        //检测自定义全局变量（register globals）并移除
         $this->unregisterGlobals();
-
+        // 路由处理
         $this->Route();
     }
 

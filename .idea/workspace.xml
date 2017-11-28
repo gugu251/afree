@@ -2,39 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2bf0ed1-390b-4233-b2d4-6dc727595daa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Controller/Tool/IndexController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/View/Tool/Translate/fyhtml.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/footer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/header.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/item/add.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/item/delete.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/item/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/item/update.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/item/view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/layout.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/专题内容页.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/专题列表页.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/图片内容页.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/新闻内容页.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/新闻列表页.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/本地服务.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/本地服务内容页.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/用户中心.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/View/首页.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Controller/Admin/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Controller/Admin/IndexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Controller/Admin/NewsController.class.php" afterPath="$PROJECT_DIR$/Application/Controller/Admin/NewsController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Model/AdminmenuModel.class.php" afterPath="$PROJECT_DIR$/Application/Model/AdminmenuModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Model/NewsModel.class.php" afterPath="$PROJECT_DIR$/Application/Model/NewsModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/View/Admin/News/list.html" afterPath="$PROJECT_DIR$/Application/View/Admin/News/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/View/Admin/Public/footer.html" afterPath="$PROJECT_DIR$/Application/View/Admin/Public/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/View/Admin/Public/header.html" afterPath="$PROJECT_DIR$/Application/View/Admin/Public/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/View/Admin/Public/left.html" afterPath="$PROJECT_DIR$/Application/View/Admin/Public/left.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/View/Admin/index.html" afterPath="$PROJECT_DIR$/Application/View/Admin/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/AfreePHP.php" afterPath="$PROJECT_DIR$/Core/AfreePHP.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Common/functions.php" afterPath="$PROJECT_DIR$/Core/Common/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Sql.class.php" afterPath="$PROJECT_DIR$/Core/Sql.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/View/Tool/Translate/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php" afterPath="$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/View/Tool/Translate/fyhtml.html" afterPath="$PROJECT_DIR$/Application/View/Tool/Translate/fyhtml.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Core.php" afterPath="$PROJECT_DIR$/Core/Core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,8 +21,28 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AfreePHP.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/AfreePHP.php">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="17" />
+              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Core.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Core/Core.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -65,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TranslateController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TranslateController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+            <state relative-caret-position="459">
+              <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="11" />
               <folding>
                 <element signature="e#6#95#0#PHP" expanded="true" />
               </folding>
@@ -77,11 +70,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/View/Tool/Translate/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Core/Controller.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="fyhtml.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/View/Tool/Translate/fyhtml.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="255">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -101,8 +114,9 @@
       <find>/index</find>
       <find>find</find>
       <find>TranslateClient</find>
-      <find>$language</find>
       <find>fetchAll</find>
+      <find>$language</find>
+      <find>$translate</find>
     </findStrings>
     <replaceStrings>
       <replace>/News/list</replace>
@@ -130,8 +144,11 @@
         <option value="$PROJECT_DIR$/Core/Sql.class.php" />
         <option value="$PROJECT_DIR$/Application/Controller/Admin/NewsController.class.php" />
         <option value="$PROJECT_DIR$/Application/Controller/Tool/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php" />
         <option value="$PROJECT_DIR$/Application/View/Tool/Translate/fyhtml.html" />
+        <option value="$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php" />
+        <option value="$PROJECT_DIR$/Application/View/Tool/Translate/index.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/Core/Core.php" />
       </list>
     </option>
   </component>
@@ -301,60 +318,6 @@
             <path>
               <item name="afree" type="b2602c69:ProjectViewProjectNode" />
               <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Tool" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Tool" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Tool" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Translate" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="afree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="afree" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Core" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -412,12 +375,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511837895083</updated>
       <workItem from="1511837901289" duration="15000" />
-      <workItem from="1511838854403" duration="10600000" />
+      <workItem from="1511838854403" duration="15773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10615000" />
+    <option name="totallyTimeSpent" value="15788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -464,26 +427,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Core.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Model.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/Controller.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -586,34 +533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/AfreePHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/Vendor/Translate/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Controller/Admin/NewsController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -667,19 +590,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/View/Tool/Translate/fyhtml.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="255">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Controller.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Controller/Admin/NewsController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Controller/Tool/TranslateController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="58" column="45" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+        <state relative-caret-position="459">
+          <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="11" />
           <folding>
             <element signature="e#6#95#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/View/Tool/Translate/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="45" lean-forward="true" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/AfreePHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
