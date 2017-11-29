@@ -1,14 +1,16 @@
 <?php
 
-class AdminmenuModel extends Model {
+class AdminmenuModel extends Model
+{
     /* 业务逻辑层实现 */
 
     /**
      * 获取后台栏目列表
      * @return type
      */
-    public function getMenuList() {
-        $list  = $this->selectAll();
+    public function getMenuList()
+    {
+        $list = $this->selectAll();
         $menus = array();
         foreach ($list as $key => $value) {
             if ($value['pid'] > 0) {
