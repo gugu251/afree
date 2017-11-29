@@ -13,7 +13,7 @@
         <div class="am_footer_don">
             <span>宠物秀</span>
             <dl>
-                <dt><img src="__STYLE__/home/img/footdon.png?1" alt=""></dt>
+                <dt><img src="/Public/style/home/img/footdon.png?1" alt=""></dt>
                 <dd>一起Show我们的爱宠吧！宠物秀是图片配文字、涂鸦、COSPLAY的移动手机社区，这里有猫狗鱼龟兔子仓鼠龙猫等各种萌图。
                     <a href="###" class="footdon_pg ">
                         <div class="foot_d_pg am-icon-apple "> App store</div>
@@ -25,11 +25,11 @@
         </div>
 
         <div class="am_footer_erweima">
-            <div class="am_footer_weixin"><img src="__STYLE__/home/img/wx.jpg" alt="">
+            <div class="am_footer_weixin"><img src="/Public/style/home/img/wx.jpg" alt="">
 
                 <div class="am_footer_d_gzwx am-icon-weixin"> 关注微信</div>
             </div>
-            <div class="am_footer_ddon"><img src="__STYLE__/home/img/wx.jpg" alt="">
+            <div class="am_footer_ddon"><img src="/Public/style/home/img/wx.jpg" alt="">
 
                 <div class="am_footer_d_dxz am-icon-cloud-download"> 扫码下载</div>
             </div>
@@ -39,6 +39,21 @@
     </div>
     <div class="am_info_line">Copyright(c)2015 <span>PetShow</span> All Rights Reserved</div>
 </footer>
-<script src="__STYLE__/home/js/petshow.js"></script>
+<script src="/Public/style/home/js/petshow.js"></script>
+<script>
+    $(function () {
+        $('.am_news_tab').css('min-height', $(window).height() - 52 - 220);
+        if ($(window).width() < 600) {
+            $('.am_list_item_text').each(
+                function () {
+                    if ($(this).text().length >= 26) {
+                        $(this).html($(this).text().substr(0, 26) + '...');
+                    }
+                });
+        }
+
+    });
+
+</script>
 </body>
 </html>

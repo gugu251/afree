@@ -76,7 +76,7 @@ class Sql
         $sth = $this->_dbHandle->prepare($sql);
         $sth->execute();
 
-        return $sth->fetchOne();
+        return $sth->fetch();
     }
 
     // 查询所有

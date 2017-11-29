@@ -1,0 +1,77 @@
+<include file="Public/header" />
+<link rel="stylesheet" href="__STYLE__/mark/css/style.css" />
+<link rel="stylesheet" href="__STYLE__/mark/css/editormd.css" />
+<div class="row" style="margin-top:70px">
+    <include file="Public/left" />
+
+    <div class="main-right  col-md-10 col-md-offset-2">
+            <div class="col-md-12">
+                    <div class="panel panel-default ">
+                        <div class="panel-heading">
+                            接口文档修改
+                        </div>
+  
+    <form action="__CONTROLLER__/edit" method="post">
+        <table class="table table-striped table-hover">
+            <tr>
+                <td>文档标题</td>
+                <td><input name="title" class="form-control" type="text" value="{$data.title}"></td>
+            </tr>
+            <tr>
+                <td>文档分类</td>
+                <td><input name="desc" class="form-control" type="text" value="{$data.desc}"></td>
+            </tr>
+            <tr>
+                <td>文档描述</td>
+                <td><input name="desc" class="form-control" type="text" value="{$data.desc}"></td>
+            </tr>
+            <tr>
+                <td>文档内容</td>
+                <td>
+                    <div id="layout">
+                    <div id="test-editormd">
+                        <textarea name="content" style="display:none;">{$data.content}</textarea>
+                    </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>修改：</td>
+                <td>
+                    <input type="hidden" class="btn btn-default" name='id' value="{$data.id}">
+                    <input type="submit" class="btn btn-default" value="确定">
+                </td>
+            </tr>
+            
+        </table>
+    </form>
+    </div>
+    </div>
+    </div>
+
+    </div>
+<script src="__STYLE__/mark/js/jquery.min.js"></script>
+<script src="__STYLE__/mark/js/editormd.min.js"></script>
+<script type="text/javascript">
+            var testEditor;
+
+            $(function() {
+                testEditor = editormd("test-editormd", {
+                    width   : "90%",
+                    height  : 640,
+                    syncScrolling : "single",
+                    path    : "__STYLE__/mark/lib/"
+                });
+                
+                // testEditor = editormd({
+                //     id      : "test-editormd",
+                //     width   : "90%",
+                //     height  : 640,
+                //     path    : "__STYLE__/mark/lib/"
+                // });
+                
+            });
+        </script>
+<include file="Public/footer" />
+
+

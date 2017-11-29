@@ -33,6 +33,7 @@ class Core {
         if (!empty($_SERVER['PATH_INFO'])) {
 
             $url = $_SERVER['PATH_INFO'];
+//            var_dump($url);
 
             // 使用“/”分割字符串，并保存在数组中
             $urlArray = explode('/', $url);
