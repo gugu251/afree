@@ -2,15 +2,14 @@
 <!--{include file='Public/header.html'}-->
 <!--网页头部 end-->
 
-
-<article data-am-widget="paragraph" class="am-paragraph am-paragraph-default article_nr"
-         data-am-paragraph="{ tableScrollable: true, pureview: true }">
+<article data-am-widget="paragraph" class="am-paragraph am-paragraph-default article_nr" data-am-paragraph="{ tableScrollable: true, pureview: true }">
     <h1 class="article_nr_title"><!--{$markdown['title']}--></h1>
-    <div class="am_list_author"><a href="javascript:void(0)"><span class="am_list_author_ico"
-                                                                   style="background-image: url(img/tx.jpg);"></span><span
-            class="name">Okaeri</span></a><span class="am_news_time">&nbsp;•&nbsp;<time class="timeago"
-                                                                                        title="2015-08-13 08:02:40 +0800"
-                                                                                        datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
+    <div class="am_list_author">
+        <a href="javascript:void(0)">
+            <span class="am_list_author_ico" style="background-image: url(img/tx.jpg);"></span>
+            <span class="name">Okaeri</span>
+        </a>
+        <span class="am_news_time">&nbsp;•&nbsp;<time class="timeago" title="2015-08-13 08:02:40 +0800" datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
     </div>
     <div class="article_nr_content">
         <div id="layout">
@@ -18,10 +17,8 @@
                 <textarea id="append-test" style="display:none;">
                     <!--{$markdown['content']}-->
                 </textarea>
-                
             </div>
         </div>
-
     </div>
     <div class="article_nr_more">
         <div class="article_nr_l">
@@ -31,14 +28,13 @@
         <div class="article_nr_more_r">
             <span>分享 </span>
             <span class="article_nr_more_ico ">
-  <a href="###" class="am-icon-btn am-secondary am-icon-qq"></a>
-  <a href="###" class="am-icon-btn am-success am-icon-weixin"></a>
-  <a href="###" class="am-icon-btn am-danger am-icon-weibo"></a>
-</span>
+              <a href="###" class="am-icon-btn am-secondary am-icon-qq"></a>
+              <a href="###" class="am-icon-btn am-success am-icon-weixin"></a>
+              <a href="###" class="am-icon-btn am-danger am-icon-weibo"></a>
+            </span>
         </div>
     </div>
 </article>
-
 <div class="am_tjgd">
     <div class="am-list-news-bd am_news_list_all">
         <ul class="am-list">
@@ -48,13 +44,13 @@
                     <h3 class="am-list-item-hd am_list_title am_list_title_s">
                         <a href="###" class="">“你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
                     </h3>
-                    <div class="am_list_author"><a href="javascript:void(0)"><span class="am_list_author_ico"
-                                                                                   style="background-image: url(img/tx.jpg);"></span><span
-                            class="name">Okaeri</span></a><span class="am_news_time">&nbsp;•&nbsp;<time class="timeago"
-                                                                                                        title="2015-08-13 08:02:40 +0800"
-                                                                                                        datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
+                    <div class="am_list_author">
+                        <a href="javascript:void(0)">
+                            <span class="am_list_author_ico" style="background-image: url(img/tx.jpg);"></span>
+                            <span class="name">Okaeri</span>
+                        </a>
+                        <span class="am_news_time">&nbsp;•&nbsp;<time class="timeago" title="2015-08-13 08:02:40 +0800" datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
                     </div>
-
                     <div class="am-list-item-text am_list_item_text">
                         还在苦恼圣诞礼物再也玩儿不出新意？快来抢2013最炫彩的跨国圣诞礼物！【参与方式】1.关注“UniqueWay无二之旅”豆瓣品牌小站http://brand.douban.com/uniqueway/2.上传一张**本人**在旅行中色彩最浓郁、最丰富的照片（色彩包含取景地、周边事物、服装饰品、女生彩妆等等，发挥你们无穷的创意想象力哦！^^）一定要有本人出现喔！3.
                         在照片下方，附上一句旅行宣言作为照片说明。 成功参与活动！* 听他们刚才说，上传照片的次
@@ -78,15 +74,15 @@
 
 <script src="/Public/style/mark/js/editormd.js"></script>
 <script type="text/javascript">
-    $(function() {
+    $(function () {
         var testEditormdView, testEditormdView;
         testEditormdView2 = editormd.markdownToHTML("test-editormd-view", {
-            htmlDecode      : "style,script,iframe",  // you can filter tags decode
-            emoji           : true,
-            taskList        : true,
-            tex             : true,  // 默认不解析
-            flowChart       : true,  // 默认不解析
-            sequenceDiagram : true,  // 默认不解析
+            htmlDecode: "style,script,iframe",  // you can filter tags decode
+            emoji: true,
+            taskList: true,
+            tex: true,  // 默认不解析
+            flowChart: true,  // 默认不解析
+            sequenceDiagram: true,  // 默认不解析
         });
     });
 </script>

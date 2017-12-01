@@ -9,7 +9,8 @@ class IndexController extends AdminController {
      * 后台管理首页
      */
     public function index() {
-        $items = (new NewsModel)->getList(1);
+
+        $items = (new NewsModel)->getList($where);
 
         $this->assign('title', '这是首页');
         $this->assign('news', $items);

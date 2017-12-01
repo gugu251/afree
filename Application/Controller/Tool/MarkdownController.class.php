@@ -29,7 +29,7 @@ class MarkdownController extends Controller
 	public function detail()
 	{
 		$mark = (new MarkdownModel);
-		$id =
+		$id = $_GET['id'];
 		$list = $mark->getOne(1);
 //		var_dump($list);
 		$this->assign('title', 'Markdown列表');
@@ -37,6 +37,8 @@ class MarkdownController extends Controller
 		$this->display('Tool/Markdown/detail.html');
 
 	}
+
+
 }
 
 

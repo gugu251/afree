@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.32-dev-38, created on 2017-11-29 18:51:27
+/* Smarty version 3.1.32-dev-38, created on 2017-12-01 15:52:07
   from 'D:\GIT\afree\Application\View\Tool\Markdown\detail.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.32-dev-38',
-  'unifunc' => 'content_5a1e912fb78872_47374325',
+  'unifunc' => 'content_5a210a27ef7211_62436152',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '72aad94ad8078a38a5dfd73d13901e2d4e21466d' => 
     array (
       0 => 'D:\\GIT\\afree\\Application\\View\\Tool\\Markdown\\detail.html',
-      1 => 1511952685,
+      1 => 1512004310,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:Public/footer.html' => 1,
   ),
 ),false)) {
-function content_5a1e912fb78872_47374325 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a210a27ef7211_62436152 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!--网页头部 start-->
 <?php $_smarty_tpl->_subTemplateRender('file:Public/header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -46,7 +46,7 @@ function content_5a1e912fb78872_47374325 (Smarty_Internal_Template $_smarty_tpl)
                     <?php echo $_smarty_tpl->tpl_vars['markdown']->value['content'];?>
 
                 </textarea>
-                
+
             </div>
         </div>
 

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/afree.iml" filepath="$PROJECT_DIR$/.idea/afree.iml" />
       <module fileurl="file://D:/www/fudeshu/.idea/fudeshu.iml" filepath="D:/www/fudeshu/.idea/fudeshu.iml" />
+      <module fileurl="file://D:/www/futu/.idea/futu.iml" filepath="D:/www/futu/.idea/futu.iml" />
     </modules>
   </component>
 </project>
