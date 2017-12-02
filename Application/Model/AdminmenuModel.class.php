@@ -2,6 +2,9 @@
 
 class AdminmenuModel extends Model
 {
+	// 表名
+	protected $_table = DB_FN . 'adminmenu';
+
     /* 业务逻辑层实现 */
 
     /**

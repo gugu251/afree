@@ -43,13 +43,30 @@ class MarkController extends AdminController
 	 */
 	public function edit()
 	{
-		$id = $_GET['id'];
-		if($_POST['id']){
+
+		$markdownModel = new MarkdownModel();
+
+		if ($_POST) {
+			$title = $_POST['title'];
+			$content = $_POST['content'];
+			$cid = $_POST['cid'];
+			$id = $_POST['id'];
+			if ($id) {
+				$re = $markdownModel->upInfo($id, $title, $content, $cid);
+			} else {
+				$re = $markdownModel->addInfo($title, $content, 1, $cid);
+			}
+			var_dump($re);
 
 		}
-		$info = (new MarkdownModel)->getOne($id);
+		$id = $_GET['id'];
+		if ($id) {
+			$info = $markdownModel->getOne($id);
+		}
+		$cate = (new MarkdowncateModel)->getAll();
 		$this->assign('title', 'Markdown编辑页');
 		$this->assign('markdown', $info);
+		$this->assign('cate', $cate);
 		$this->display('Admin/Mark/edit.html');
 	}
 

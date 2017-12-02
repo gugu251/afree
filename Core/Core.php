@@ -62,15 +62,15 @@ class Core
 		// 实例化控制器
 		$controller = $controllerName . 'Controller';
 
-//        if ($controller) {
-//            $fileNameController = $fileName . '/' . $controller;
-//            $controllers        = APP_PATH . 'Application/Controller/' . $fileNameController . '.class.php';
-//
-//            if (file_exists($controllers)) {
-//                // 加载应用控制器类
-//                include $controllers;
-//            }
-//        }
+        if ($controller) {
+            $fileNameController = $fileName . '/' . $controller;
+            $controllers        = APP_PATH . 'Application/Controller/' . $fileNameController . '.class.php';
+
+            if (file_exists($controllers)) {
+                // 加载应用控制器类
+                include $controllers;
+            }
+        }
 
 		$dispatch = new $controller($controller, $action);
 

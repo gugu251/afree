@@ -17,6 +17,8 @@ function getAppName()
 		$fileName = ucfirst($urlArray[0]);
 		if ($fileName) {
 			define('APP_NAME', $fileName);
+		} else {
+			define('APP_NAME', 'index');
 		}
 	} else {
 		define('APP_NAME', 'index');

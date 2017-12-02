@@ -30,8 +30,7 @@ class MarkdownController extends Controller
 	{
 		$mark = (new MarkdownModel);
 		$id = $_GET['id'];
-		$list = $mark->getOne(1);
-//		var_dump($list);
+		$list = $mark->getOne($id);
 		$this->assign('title', 'Markdown列表');
 		$this->assign('markdown', $list);
 		$this->display('Tool/Markdown/detail.html');
