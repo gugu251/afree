@@ -18,10 +18,10 @@ function getAppName()
 		if ($fileName) {
 			define('APP_NAME', $fileName);
 		} else {
-			define('APP_NAME', 'index');
+			define('APP_NAME', 'Index');
 		}
 	} else {
-		define('APP_NAME', 'index');
+		define('APP_NAME', 'Index');
 	}
 }
 

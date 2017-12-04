@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
     /**
      * 首页
@@ -18,12 +18,12 @@ class IndexController extends Controller
     /**
      * 图文列表
      */
-    public function news(){
+    public function newslist(){
         $items = (new NewsModel)->getList(1);
 
         $this->assign('title', '图文列表页');
         $this->assign('news', $items);
 //      exit;
-        $this->display('Index/news.html');
+        $this->display('Index/newslist.html');
     }
  }
