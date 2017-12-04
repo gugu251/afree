@@ -49,5 +49,37 @@ class NewsController extends AdminController {
         $this->display('Admin/News/list.html');
     }
 
+	/**
+	 * 编辑页
+	 */
+	public function edit()
+	{
+
+		$NewsModel = new NewsModel();
+
+		if ($_POST) {
+			$title = $_POST['title'];
+			$content = $_POST['content'];
+			$cid = $_POST['cid'];
+			$id = $_POST['id'];
+			if ($id) {
+				$re = $NewsModel->upInfo($id, $title, $content, $cid);
+			} else {
+				$re = $NewsModel->addInfo($title, $content, 1, $cid);
+			}
+			var_dump($re);
+
+		}
+		$id = $_GET['id'];
+		if ($id) {
+			$info = $NewsModel->getOne($id);
+		}
+		$cate = (new NewsCateModel)->getAll();
+		$this->assign('title', '图文编辑页');
+		$this->assign('markdown', $info);
+		$this->assign('cate', $cate);
+		$this->display('Admin/News/edit.html');
+	}
+
 
 }

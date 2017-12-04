@@ -9,6 +9,7 @@ class AdminController extends Controller {
         parent::__construct();
         $menus = (new AdminmenuModel)->getMenuList();
         $this->assign('menus', $menus);
+
     }
 
 }

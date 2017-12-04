@@ -36,7 +36,6 @@ class Core
 		if (!empty($_SERVER['PATH_INFO'])) {
 
 			$url = $_SERVER['PATH_INFO'];
-//            var_dump($url);
 
 			// 使用“/”分割字符串，并保存在数组中
 			$urlArray = explode('/', $url);
@@ -54,7 +53,6 @@ class Core
 			// 获取动作名
 			array_shift($urlArray);
 			$action = $urlArray ? $urlArray[0] : 'index';
-
 			// 获取URL参数
 			array_shift($urlArray);
 			$param = $urlArray ? $urlArray : array();
