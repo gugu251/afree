@@ -8,19 +8,32 @@
  */
 class MarkdownController extends Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$menus = (new MarkdowncateModel)->getAll();
+		$this->assign('menus', $menus);
+	}
+
 	/**
 	 * 首页
+	 *
 	 */
 	public function index()
 	{
-		$mark = (new MarkdownModel);
-
-		$list = $mark->getList(1);
-//		var_dump($list);
 		$this->assign('title', 'Markdown列表');
-		$this->assign('markdown', $list);
 		$this->display('Tool/Markdown/list.html');
 
+	}
+
+	public function marklist()
+	{
+		$cate_id = $_POST['cate_id'] ? $_POST['cate_id'] : 1;
+		$page = $_POST['page'] ? $_POST['page'] : 1;
+		$list = (new MarkdownModel)->getList($cate_id, $page);
+
+		$this->assign('markdown', $list);
+		$this->display('Tool/Markdown/marklist.html');
 	}
 
 	/**
@@ -28,11 +41,10 @@ class MarkdownController extends Controller
 	 */
 	public function detail()
 	{
-		$mark = (new MarkdownModel);
 		$id = $_GET['id'];
-		$list = $mark->getOne($id);
+		$info = (new MarkdownModel)->getOne($id);
 		$this->assign('title', 'Markdown列表');
-		$this->assign('markdown', $list);
+		$this->assign('markdown', $info);
 		$this->display('Tool/Markdown/detail.html');
 
 	}

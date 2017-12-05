@@ -26,4 +26,11 @@ class IndexController extends BaseController
 //      exit;
         $this->display('Index/newslist.html');
     }
+
+	/**
+	 * 登陆
+	 */
+    public function login(){
+		$this->display('Public/login.html');
+	}
  }

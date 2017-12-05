@@ -6,9 +6,26 @@ class MarkdownModel extends Model
 	protected $_table = DB_FN . 'markdown';
 
 	/* 业务逻辑层实现 */
-	public function getlist($where)
+	public function getlist($cate_id, $page = 1, $limit = 10)
 	{
-		$list = $this->where($where)->selectAll();
+		if ($cate_id) {
+			$where['cate_id'] = $cate_id;
+		}
+		$list = $this->where($where)->page($page, $limit)->selectAll();
+		$uids = array();
+		foreach ($list as $value){
+			$uids[] = $value['user_id'];
+		}
+		//用户组
+		$uids = array_unique($uids);
+		$userArr = (new UserModel)->getArrByIds($uids);
+
+		foreach ($list as $kk => $vv){
+			$list[$kk]['user_nickname'] = $userArr[$vv['user_id']]['user_nickname'];
+			$list[$kk]['user_avatar'] = $userArr[$vv['user_id']]['user_avatar'];
+			$list[$kk]['datetime'] = date('Y-m-d H:i:s',$vv['create_time']);
+			$list[$kk]['desc'] =  $vv['desc']?$vv['desc']:cutArticle($vv['content']);
+		}
 		return $list;
 	}
 
@@ -20,8 +37,12 @@ class MarkdownModel extends Model
 	public function getOne($id)
 	{
 		$where['id'] = $id;
-		$list = $this->where($where)->find();
-		return $list;
+		$info = $this->where($where)->find();
+		$user = (new UserModel)->getOne($info['user_id']);
+		$info['user_nickname'] = $user['user_nickname'];
+		$info['user_avatar'] = $user['user_avatar'];
+		$info['datetime'] = date('Y-m-d H:i:s',$info['create_time']);
+		return $info;
 	}
 
 	/**

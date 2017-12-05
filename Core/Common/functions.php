@@ -26,6 +26,58 @@ function getAppName()
 }
 
 /**
+ *  获取文章的摘要
+ *
+ * @param string $data
+ * @param int $cut 字数 自定义
+ * @param string $str
+ * @return type
+ */
+function cutArticle($data, $cut = 200, $str = "...")
+{
+	$data = strip_tags($data);
+	$pattern = "/&[a-zA-Z]+;/";
+	$data = preg_replace($pattern, '', $data);
+	if (!is_numeric($cut)) {
+		return $data;
+	}
+	if ($cut > 0) {
+		$data = trim(mb_strimwidth($data, 0, $cut, $str));
+	}
+	return $data;
+}
+
+/**
+ * 4      * 解密
+ * 5      *
+ * 6      * @param string $encryptedText 已加密字符串
+ * 7      * @param string $key 密钥
+ * @return string
+ */
+function decrypt($encryptedText, $key = '12306')
+{
+	$cryptText = base64_decode($encryptedText);
+	$ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
+	$iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
+	$decryptText = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, $cryptText, MCRYPT_MODE_ECB, $iv);
+	return trim($decryptText);
+}
+
+/**
+ * 加密
+ *
+ * @param string $plainText 未加密字符串
+ * @param string $key 密钥
+ */
+function encrypt($plainText, $key = '12306')
+{
+	$ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
+	$iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
+	$encryptText = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $plainText, MCRYPT_MODE_ECB, $iv);
+	return trim(base64_encode($encryptText));
+}
+
+/**
  * 加载第三方扩展类
  * $path 路径
  * $phpName 引入php名

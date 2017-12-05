@@ -1,0 +1,43 @@
+<header class="am-topbar">
+    <div class="amz-container">
+        <h1 class="am-topbar-brand">
+            <a href="#" class="am-topbar-logo">
+                <img src="/Public/style/home/img/logo.png?1" alt="">
+            </a>
+        </h1>
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+                data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+            <span class="am-sr-only">
+                导航切换
+            </span>
+            <span class="am-icon-bars">
+            </span>
+        </button>
+        <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse-5">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                <li class="am-active">
+                    <a href="/">
+                        首页
+                    </a>
+                </li>
+                <!--{foreach $menus item='cate'}-->
+                <li>
+                    <a href="/tool/markdown/index?cate_id=<!--{$cate['id']}-->">
+                        <!--{$cate['name']}-->
+                    </a>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+            <form class="am-topbar-form am-topbar-left am-form-inline" role="search">
+                <div class="am-form-group">
+                    <input type="text" class="am-form-field am-input-sm am-radius" placeholder="搜索">
+                </div>
+            </form>
+
+            <div class="am-topbar-right">
+                <a class="am-btn am-btn-success am-topbar-btn  am-radius" href="http://www.bing.com" target="_blank">登录</a>
+                <a class="am-btn am-btn-success am-topbar-btn  am-radius" href="http://www.bing.com" target="_blank">注册</a>
+            </div>
+        </div>
+    </div>
+</header>
