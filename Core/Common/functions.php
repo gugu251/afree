@@ -48,34 +48,33 @@ function cutArticle($data, $cut = 200, $str = "...")
 }
 
 /**
- * 4      * 解密
- * 5      *
- * 6      * @param string $encryptedText 已加密字符串
- * 7      * @param string $key 密钥
- * @return string
+ * 成功返回
+ * @param string $msg
+ * @param int $code
+ * @param string $navTabId
+ * @param string $rel
+ * @param string $callbackType
+ * @param string $forwardUrl
+ * @param string $confirmMsg
  */
-function decrypt($encryptedText, $key = '12306')
+function success($msg = '操作成功', $code = 200)
 {
-	$cryptText = base64_decode($encryptedText);
-	$ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
-	$iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
-	$decryptText = mcrypt_decrypt(MCRYPT_RIJNDAEL_256, $key, $cryptText, MCRYPT_MODE_ECB, $iv);
-	return trim($decryptText);
+	$data = array(
+		'status' => $code,
+		'message'    => $msg
+	);
+	exit(json_encode($data));
 }
 
-/**
- * 加密
- *
- * @param string $plainText 未加密字符串
- * @param string $key 密钥
- */
-function encrypt($plainText, $key = '12306')
+function error($msg = '操作失败', $code = 300)
 {
-	$ivSize = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
-	$iv = mcrypt_create_iv($ivSize, MCRYPT_RAND);
-	$encryptText = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, $key, $plainText, MCRYPT_MODE_ECB, $iv);
-	return trim(base64_encode($encryptText));
+	$data = array(
+		'status' => $code,
+		'message'    => $msg
+	);
+	exit(json_encode($data));
 }
+
 
 /**
  * 加载第三方扩展类

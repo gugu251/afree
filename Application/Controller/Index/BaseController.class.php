@@ -12,7 +12,6 @@ class BaseController extends Controller
     {
         parent::__construct();
         $cate = (new NewsCateModel)->getAll();
-//        var_dump($cate);
         $this->assign('newscate',$cate);
     }
 

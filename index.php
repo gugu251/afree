@@ -6,6 +6,7 @@
 
 //PRC  中华人民共和国  上海的时区
 date_default_timezone_set("Asia/Shanghai");
+session_start();
 
 //网站目录
 define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
@@ -23,10 +24,12 @@ define('APP_URL', 'http://www.bbb.com');
 define('CORE_PATH', APP_PATH . 'Core/');
 
 //公共样式目录
-define('APP_PUBLIC', APP_PATH . 'Public/');
+define('APP_PUBLIC', '/Public/');
+define('APP_PUBLIC_STYLE', '/Public/style/');
 
 //公共函数目录
 define('APP_COMMON', CORE_PATH . 'Common/');
+
 
 // 加载框架
 require CORE_PATH . 'AfreePHP.php';

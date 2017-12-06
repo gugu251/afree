@@ -497,3 +497,6 @@ background-size: 100%; }
 .tr-yunpan {
     background-color: #1aa1ff;
 }
+.afree_width_300{
+    max-width: 300px;
+}
