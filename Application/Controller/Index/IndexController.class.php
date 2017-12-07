@@ -12,7 +12,7 @@ class IndexController extends BaseController
 		$this->assign('title', '这是首页');
 		$this->assign('news', $items);
 //      exit;
-		$this->display('Index/index.html');
+		$this->display('Index/News/index.html');
 	}
 
 	/**
@@ -25,7 +25,7 @@ class IndexController extends BaseController
 		$this->assign('title', '图文列表页');
 		$this->assign('news', $items);
 //      exit;
-		$this->display('Index/newslist.html');
+		$this->display('Index/News/newslist.html');
 	}
 
 	/**

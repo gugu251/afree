@@ -48,6 +48,19 @@ function cutArticle($data, $cut = 200, $str = "...")
 }
 
 /**
+ * 判断文件夹是否存在不存在则创建
+ * @param $dir
+ * @param int $mode
+ * @return bool
+ */
+function mkdirs($dir, $mode = 0777)
+{
+	if (is_dir($dir) || @mkdir($dir, $mode)) return TRUE;
+	if (!mkdirs(dirname($dir), $mode)) return FALSE;
+	return @mkdir($dir, $mode);
+}
+
+/**
  * 成功返回
  * @param string $msg
  * @param int $code
@@ -60,8 +73,8 @@ function cutArticle($data, $cut = 200, $str = "...")
 function success($msg = '操作成功', $code = 200)
 {
 	$data = array(
-		'status' => $code,
-		'message'    => $msg
+		'status'  => $code,
+		'message' => $msg
 	);
 	exit(json_encode($data));
 }
@@ -69,8 +82,8 @@ function success($msg = '操作成功', $code = 200)
 function error($msg = '操作失败', $code = 300)
 {
 	$data = array(
-		'status' => $code,
-		'message'    => $msg
+		'status'  => $code,
+		'message' => $msg
 	);
 	exit(json_encode($data));
 }

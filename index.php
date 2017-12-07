@@ -12,7 +12,7 @@ session_start();
 define('APP_PATH', dirname($_SERVER['SCRIPT_FILENAME']) . '/');
 
 // 开启调试模式
-define('APP_DEBUG', false);
+define('APP_DEBUG', true);
 
 //默认访问目录
 //define('APP_NAME', 'index');
@@ -26,6 +26,7 @@ define('CORE_PATH', APP_PATH . 'Core/');
 //公共样式目录
 define('APP_PUBLIC', '/Public/');
 define('APP_PUBLIC_STYLE', '/Public/style/');
+define('APP_PUBLIC_UPLOAD', APP_PATH . 'Public/upload/');
 
 //公共函数目录
 define('APP_COMMON', CORE_PATH . 'Common/');

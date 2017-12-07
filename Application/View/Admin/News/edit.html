@@ -92,7 +92,6 @@
                                     <p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
                                 </div>
                             </div>
-
                         </div>
 
                         <div class="am-form-group">
@@ -112,11 +111,22 @@
 <!-- 引用js -->
 <script type="text/javascript" src="/Public/style/edit/wangEditor.js"></script>
 <script type="text/javascript">
+
     var E = window.wangEditor
     var editor = new E('#div1')
+    // 自定义菜单配置
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'justify',  // 对齐方式
+        'image',  // 插入图片
+        'video',  // 插入视频
+        'code',  // 插入代码
+    ]
     editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
-    editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
+    editor.customConfig.uploadImgServer = '/tool/upload/imgupload'  // 上传图片到服务器
     editor.create()
+
 </script>
 <!--图片上传 start-->
 <!--{include file='Admin/Public/upload.html'}-->
