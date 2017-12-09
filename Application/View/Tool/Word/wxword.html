@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>微信公众平台图文排版工具_在线内容编辑软件_96微信编辑器</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="微信编辑器|微信在线编辑|微信编辑软件|微信图文编辑器|微信文章编辑器|微信内容编辑器|微信公众平台编辑器">
+    <meta name="description" content="96微信编辑器是一款专业强大的微信公众平台在线编辑排版工具，提供手机预览功能，让用户在微信图文 、文章、内容排版、文本编辑、素材编辑上更加方便。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta name="baidu-site-verification" content="12Aj264iwD">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta property="wb:webmaster" content="d61b58ac76221ca9" />
+    <link rel="stylesheet" href="/Public/style/tool/word/css/global.css?26">
+    <link rel="stylesheet" href="/Public/style/tool/word/css/iconfont.css">
+    <script src="/Public/style/tool/word/js/jquery-1.11.2.min.js"></script>
+    <meta name="360-site-verification" content="a48239b27f3924d60f8c53cb39dc7785" />
+    <style>
+        .com-meber-logined {margin-right: 85px;}
+        .header{height: 50px;}
+        .container{width: 1290px;}
+        .header .logo h1 img{width: 140px;}
+        .com-nav{margin: 0 0 0 30px;}
+        .com-nav dt a{height: 50px;line-height: 50px;font-size: 14px;padding: 0 7px;}
+        .com-nav a .arrow {display: inline-block;margin: 2.5px 0 0 5px;border-width: 5px;border-style: solid;border-color: #888 transparent transparent;vertical-align: middle;}
+    </style>
+</head>
+<body>
+<div id="main">
+
+    <!--content  -->
+    <div class="content-wrap">
+        <div class="container container_index_width clearfix">
+
+            <!-- 左边内容 -->
+            <div class="content-l left">
+                <!-- 菜单 -->
+                <div class="tab-wrap">
+                    <dl class="active">
+                        <dt>素材库</dt><dd data="100" type="98" class="active">最新素材</dd>
+                        <dd data="17" type="1" >默认素材</dd>
+
+                        <dd data="2" type="1">行业</dd>
+                        <dd data="3" type="1">节日</dd>
+                        <!--<dd data="103" type="98" style="color:red;">万圣节</dd>-->
+                        <!--	<dd data="102" type="98" style="color:red;">感恩节</dd>-->
+                    </dl>
+                    <dl>
+                        <dt data-tips="2">模板库</dt>
+                        <dd data="4" type="2">行业</dd>
+                        <dd data="5" type="2">节日</dd>
+                    </dl>
+                </div>
+
+                <div class="content-l-box">
+                    <div class="tab-item">
+                        <div class="con-box" id="choice"></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 中间编辑器 -->
+            <div class="content-mid left">
+                <dl id="qianming">
+                    <dt><a href="javascript:;">使用签名</a></dt>
+                    <dd>
+                        <a href="javascript:;" class="no-sign">不使用签名</a>
+                        <a href="/works/sign" target="_blank">管理签名</a>
+                    </dd>
+                </dl>
+                <textarea id="container" name="content" class="content" edit="" required></textarea>
+            </div>
+
+            <!-- 右边浮动按钮 -->
+            <ul class="content-r-nav">
+                <div class="colors-box">
+                    <div class="colors-top clearfix">
+                        <h2>调色盘 </h2>
+                        <span class="left"><span id="pickerBtn"><input type="text" value="#60d295" id="picker" class="colorPicker"></span></span>
+                    </div>
+                    <div id="colorCheck" style="line-height: 24px;" class="clearfix">
+                        <label class="color-checkbox"><span class="checked" id="sci" data-value="3"><i class="active"></i>选中换色</span></label>
+                        <label class="color-checkbox"><span class="" id="eci" data-value="2"><i class=""></i>全文换色</span></label>
+                        <label class="color-checkbox"><span class="" id="mci" data-value="1"><i></i>素材换色</span></label>
+                    </div>
+                    <ul class="clearfix colors-list">
+                        <li class="color-swatch" style="background-color: #ac1d10" color="#ac1d10"></li>
+                        <li class="color-swatch" style="background-color: #d82821;" color="#d82821"></li>
+                        <li class="color-swatch" style="background-color: #ef7060;" color="#ef7060"></li>
+                        <li class="color-swatch" style="background-color: #fde2d8;" color="#fde2d8"></li>
+                        <li class="color-swatch" style="background-color: #d32a63;" color="#d32a63"></li>
+                        <li class="color-swatch" style="background-color: #eb6794;" color="#eb6794"></li>
+                        <li class="color-swatch" style="background-color: #f5bdd1;" color="#f5bdd1"></li>
+                        <li class="color-swatch" style="background-color: #ffebf0;" color="#ffebf0"></li>
+                        <li class="color-swatch" style="background-color: #e2561b;" color="#e2561b"></li>
+                        <li class="color-swatch" style="background-color: #ff8124;" color="#ff8124"></li>
+                        <li class="color-swatch" style="background-color: #fcb42b;" color="#fcb42b"></li>
+                        <li class="color-swatch" style="background-color: #feecaf;" color="#feecaf"></li>
+                        <li class="color-swatch" style="background-color: #0c8918;" color="#0c8918"></li>
+                        <li class="color-swatch" style="background-color: #80b135;" color="#80b135"></li>
+                        <li class="color-swatch" style="background-color:#c2c92a;" color="#c2c92a"></li>
+                        <li class="color-swatch" style="background-color:#e5f3d0;" color="#e5f3d0"></li>
+                        <li class="color-swatch" style="background-color:#374aae;" color="#374aae"></li>
+                        <li class="color-swatch" style="background-color:#1e9be8;" color="#1e9be8"></li>
+                        <li class="color-swatch" style="background-color:#59c3f9;" color="#59c3f9"></li>
+                        <li class="color-swatch" style="background-color:#b6e4fd;" color="#b6e4fd"></li>
+                        <!-- 紫色 -->
+                        <li class="color-swatch" style="background-color:#8d4bbb;" color="#8d4bbb"></li>
+                        <li class="color-swatch" style="background-color:#a65bcb;" color="#a65bcb"></li>
+                        <li class="color-swatch" style="background-color:#cca4e3;" color="#cca4e3"></li>
+                        <li class="color-swatch" style="background-color:#be7763;" color="#be7763"></li>
+                        <li class="color-swatch" style="background-color: #212122;" color="#212122"></li>
+                        <li class="color-swatch" style="background-color: #757576;" color="#757576"></li>
+                        <li class="color-swatch" style="background-color: #c6c6c7" color="#c6c6c7"></li>
+                        <li class="color-swatch" style="background-color: #f5f5f4" color="#f5f5f4"></li>
+                    </ul>
+                </div>
+                <li class="wdl2">保存／同步</li>
+
+                <li class="wdl2">同步到微信</li>
+
+                <li id="fuzhi" class="_copyTo">复制到微信</li>
+
+                <li class="wdl2">文章转长图</li>
+
+                <li class="wdl2">采集文章</li>
+
+                <li class="_look">预览</li>
+                <li class="_empoty">清空</li>
+
+                <li  id="1" class="wdl2">缓存草稿</li>
+                <li class="kefu">客服二维码</li>
+                <li class="kfewm"><img src="/Public/style/tool/word/img/kfewm.jpg"></li>
+            </ul>
+            <div class="con-bottom">
+                <a href="/show/ads/id/60" target="_blank" style="display:inline-block;width:550px;overflow:hidden;">
+                    <img src="/Public/style/tool/word/img20170829102150129.gif" width="550" height="60">
+                </a><a href="/show/ads/id/62" target="_blank" style="display:inline-block;width:550px;overflow:hidden;">
+                <img src="/Public/style/tool/word/img20171101143532242.gif" width="550" height="60">
+            </a>
+            </div>    </div>
+    </div>
+
+    <!-- 文章采集 -->
+    <div class="article-motal">
+        <div class="article-in">
+            <div class="article-top">
+                <h2>文章采集</h2>
+                <span class="close"><i class="iconfont icon-cuowu"></i></span>
+            </div>
+            <div class="article-con">
+                <div class="article-con-in clearfix">
+                    <div class="left article-con-name">微信文章地址</div>
+                    <div class="left article-con-text"><input type="text" name="urls" class="urls"></div>
+                    <div class="left article-con-button"><button type="submit" class="tq">采集</button></div>
+                </div>
+                <div class="radio-in">
+                    <ul>
+                        <li>
+                            <input type="radio" name="cjtype" checked value='1' />
+                            <span>采集正文</span>
+                        </li>
+                        <li>
+                            <input type="radio" name="cjtype" value='2' />
+                            <span>采集视频</span>
+                        </li>
+                        <li>
+                            <input type="radio" name="cjtype" value='3' />
+                            <span>采集音频</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="article-dec">
+                <dl>
+                    <dt>使用说明：</dt>
+                    <dd>1、微信文章必须是以http://mp.weixin.qq.com/s?src=开头的才可以</dd>
+                    <dd>2、点击“采集"按钮，采集视频链接网址，复制、粘贴到微信公众平台</dd>
+                    <dd>3、本采集功能，支持微信文章中有多个视频或者多个视频代码的文章</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!-- 预览 -->
+    <div class="phone-view" style="">
+        <div class="phone-view-body">
+            <section class="preview-phone" style="">
+                <span id="phone-close"><i class="iconfont icon-cuowu"></i></span>
+                <section class="preview-body">
+                    <section class="preview-content"></section>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <!--保存-->
+    <div id="save-wrap">
+        <div class="save">
+            <div class="save-top">
+                <h2>保存文档</h2>
+                <i class="iconfont icon-cuowu close"></i>
+            </div>
+
+            <dl class="clearfix choose  tbbox1" style="display:none;">
+
+                <dt class="left">存储选项</dt>
+
+                <dd class="left one">
+                    <span class="active bcbox" alt="2">覆盖原文</span>
+
+                    <span class="bcbox " alt="1">另存为新的</span>
+                    <input class="bc" type="hidden" >
+                </dd>
+            </dl>
+            <dl class="clearfix choose">
+                <dt class="left">填写标题</dt>
+                <dd class="left">
+                    <input type="text" name="title" class="choose-inp title" placeholder="请填写标题"/>
+                    <span class="red"> * </span>
+                </dd>
+            </dl>
+            <dl class="clearfix choose">
+                <dt class="left">填写摘要</dt>
+                <dd class="left">
+                    <textarea name="descs" rows="" cols="" class="left choose-area descs"></textarea>
+                </dd>
+            </dl>
+            <input type="hidden" class="bgid">            <input type="hidden" value="" id="thumb" />
+            <input type="hidden"  class="wtype" />
+            <!--公众号授权后显示-->
+            <div class="set-pub active">
+                <dl class="clearfix choose urlbox">
+                    <dt class="left">原文链接</dt>
+                    <dd class="left">
+                        <input type="text" value="" class="line-input wxurl" placeholder="同步微信公众号，请填写原文链接">
+                    </dd>
+                </dl>
+                <dl class="clearfix choose fm-dl">
+                    <form id="uploadform">
+                        <input type="hidden"  value="" class="wpic" />
+                        <dt class="left">设置封面</dt>
+                        <dd class="left">
+                            <input type="text" class="fm-inp left uppic" placeholder="如需同步微信公众号，请上传封面图片">
+                            <a href="javascript:;" class="file-wrap"> 上传 <input type="file" class="left file" id="pic2" name="upfile" ></a>
+                            <div class="file-pic-show" style="display: none;"><img src="" alt="" id="img-show" width="100" height=""></div>
+                        </dd>
+                    </form>
+                </dl>
+            </div>
+            <dl class="clearfix choose set-pub">
+                <dt class="left"> &nbsp;</dt>
+                <dd class="left">
+                    <a href="/mine/wechat/" style="color: #6ba7e9;font-size: 14px;"><i class="iconfont icon-weixin" style="color: green;margin-right: 8px;font-size: 20px;"></i>请先授权公众号才能进行同步保存，去授权</a>
+                </dd>
+            </dl>
+            <dl class="clearfix choose" style="display:inline-block;">
+                <dt class="left"> &nbsp;</dt>
+                <dd class="left sub-btn">
+                    <button class="wz-btn add" alt="3">保存为我的文章</button>
+                    <button class="mb-btn add" alt="2">保存到我的模板</button>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <script type="text/plain" id="upload_ue" style="display:none"></script>
+    <!--背景-->
+    <div class="set_box" id="bg-wrap">
+        <div class="set_box_top">
+        <h2>背景设置</h2>
+        <span class="set_close"></span>
+        </div>
+        <ul class="set_box_container" id="bg-container">
+        <li>
+        <span>背景图地址：</span>
+    <div class="con">
+        <input type="text" class="form J-bgChangeSrc" />
+        <a href="javascript:void(0);" class="btn wdl2">选择 / 上传</a>
+        </div>
+        </li>
+        <li>
+        <span>背景图重复：</span>
+    <div class="con">
+        <select class="form J-bgChangeRepeat">
+        <option value="repeat">重复</option>
+        <option value="no-repeat">不重复</option>
+        <option value="repeat-x">水平方向重复</option>
+        <option value="repeat-y">垂直方向重复</option></select>
+    </div>
+    </li>
+    <li>
+    <span>背景图定位：</span>
+    <div class="con">
+        <select class="form J-bgChangePosition">
+        <option value="0% 0%">左上角</option>
+        <option value="50% 0%">顶部居中</option>
+        <option value="100% 0%">右上角</option>
+        <option value="0% 50%">左边居中</option>
+        <option value="50% 50%">上下左右居中</option>
+        <option value="100% 50%">右居中</option>
+        <option value="0% 100%">左下角</option>
+        <option value="50% 100%">底部居中</option>
+        <option value="100% 100%">右下角</option></select>
+    </div>
+    </li>
+    <li>
+    <span>背景图尺寸：</span>
+    <div class="con">
+        <select class="form J-bgChangeSize">
+        <option value="auto">默认</option>
+        <option value="cover">等比缩放</option>
+        <option value="100% 100%">100 % 缩放</option>
+        <option value="contain">自适应</option></select>
+    </div>
+    </li>
+    </ul>
+    <p class="set_box_btn">
+        <a href="javascript:void(0);" class="btn btn-true set_close">确定</a>
+        <a href="javascript:void(0);" class="btn btn-cancel set_close">取消</a>
+        </p>
+        </div>
+
+        <!--段落-->
+        <div class="set_box" id="p-wrap">
+        <div class="set_box_top">
+        <h2>段落设置</h2>
+        <span class="set_close"></span>
+        </div>
+        <ul class="set_box_container" id="p-container">
+        <li>
+        <span>字体：</span>
+    <div class="con">
+        <select class="form J-pFontFamily" data-role="font-family">
+        <option value="微软雅黑">微软雅黑</option>
+        <option value="宋体">宋体</option>
+        <option value="楷体">楷体</option>
+        <option value="黑体">黑体</option>
+        <option value="隶书,SimLi">隶书</option>
+        <option value="arial">arial</option>
+        <option value="sans-serif">sans-serif</option>
+        </select>
+        </div>
+        </li>
+        <li>
+        <span>字号：</span>
+    <div class="con">
+        <input type="number" class="form J-pFontSize" data-role="font-size" data-conversion="px">px
+        </div>
+        </li>
+        <li>
+        <span>加粗：</span>
+    <div class="con">
+        <select class="form J-pFontWeight" data-role="font-weight">
+        <option value="normal">默认</option>
+        <option value="bold">加粗</option>
+        <option value="100">不加粗</option>
+        </select>
+        </div>
+        </li>
+        <li>
+        <span>颜色：</span>
+    <div class="con">
+        <input type="text" class="form J-pColor" data-role="color">
+        </div>
+        </li>
+        <li>
+        <span>字间距：</span>
+    <div class="con">
+        <input type="number" class="form J-pLetterSpacing" data-role="letter-spacing" data-conversion="px">px
+        </div>
+        </li>
+        <li>
+        <span>行高：</span>
+    <div class="con">
+        <input type="number" class="form J-pLineHeight" data-role="line-height" data-conversion="em">em
+        </div>
+        </li>
+        <li>
+        <span>首行缩进：</span>
+    <div class="con">
+        <input type="number" class="form J-pTextIndent" data-role="text-indent" data-conversion="em">em
+        </div>
+        </li>
+        <li>
+        <span>段前距：</span>
+    <div class="con">
+        <input type="number" class="form J-pPaddingTop" data-role="padding-top" data-conversion="px">px
+        </div>
+        </li>
+        <li>
+        <span>背景色：</span>
+    <div class="con">
+        <input type="text" class="form J-pBgColor" data-role="background-color">
+        </div>
+        </li>
+        <li>
+        <span>段后距：</span>
+    <div class="con">
+        <input type="number" class="form J-pPaddingBottom" data-role="padding-bottom" data-conversion="px">px
+        </div>
+        </li>
+        </ul>
+        <p class="set_box_btn">
+        <a href="javascript:void(0);" class="btn btn-true set_close">确定</a>
+        <a href="javascript:void(0);" class="btn btn-cancel set_close">取消</a>
+        </p>
+        </div>
+        <!--美图-->
+        <div class="meitubox" id="showXiuxiu_box"><div id="showXiuxiu"></div></div>
+    <div class="meitubox" style="padding:5% 10%" id="meitu_box">
+        <style>
+    .modal-header {
+        padding: 10px;
+        border-bottom: 1px solid #e5e5e5;
+        min-height: 16.42857143px;
+        background:#fff;
+        color:red;
+    }
+    button.closemt {
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        -webkit-appearance: none;
+    }.closemt {
+        float: right;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1;
+        color: #000000;
+        text-shadow: 0 1px 0 #ffffff;
+        opacity: 0.2;
+        filter: alpha(opacity=20);
+    }.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }.modal-title {
+        margin: 0;
+        line-height: 1.42857143;
+    }
+    </style>
+    <div class="modal-header" style="border:0 none">
+        <button type="button" class="closemt" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+    <h4 class="modal-title">图片编辑完后，点击顶部菜单“保存与分享”，然后点击“上传”即可将图片插入编辑器。</h4>
+    </div>
+    <div id="meitu_id_3"></div></div>
+    <div class="meitubox" id="showMosaic_box"><div id="showMosaic"></div></div>
+    <div class="meitubox ckt_box" do="showckt" id="ckt_box"></div>
+        <!--结束-->
+
+<script src="/Public/style/tool/word/js/layer.js"></script>
+    <script src="/Public/style/tool/ueditor/home.config.js?9"></script>
+    <script src="/Public/style/tool/ueditor/ueditor.all.min.js?18"></script>
+    <script src="/Public/style/tool/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js"></script>
+    <script src="/Public/style/tool/word/js/preview.js"></script>
+    <script src="/Public/style/tool/word/js/less.js"></script>
+    <script src="/Public/style/tool/word/js/editor.js"></script>
+    <script src="/Public/style/tool/word/js/color.js"></script>
+    <script src="/Public/style/tool/word/js/color_exchange.js"></script>
+    <script src="/Public/style/tool/word/js/96editor.js?3"></script>
+    <script src="/Public/style/tool/word/js/xiuxiu.js"></script>
+    <script src="/Public/style/tool/word/js/main.js?526"></script>
+    <script src="/Public/style/tool/word/js/global.js"></script>
+    <script src="/Public/style/tool/word/js/masonry.js"></script>
+
+    
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        微信公众平台图文排版工具_在线内容编辑软件_96微信编辑器
+    </title>
+    <meta charset="utf-8">
+    <meta content="微信编辑器|微信在线编辑|微信编辑软件|微信图文编辑器|微信文章编辑器|微信内容编辑器|微信公众平台编辑器" name="keywords">
+    <meta content="96微信编辑器是一款专业强大的微信公众平台在线编辑排版工具，提供手机预览功能，让用户在微信图文 、文章、内容排版、文本编辑、素材编辑上更加方便。" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="webkit" name="renderer">
+    <meta content="12Aj264iwD" name="baidu-site-verification">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="d61b58ac76221ca9" property="wb:webmaster"/>
+    <link href="/Public/style/tool/word/css/global.css?26" rel="stylesheet">
+    <link href="/Public/style/tool/word/font/iconfont.css" rel="stylesheet">
+    <script src="/Public/style/tool/word/js/jquery-1.11.2.min.js">
+    </script>
+    <meta content="a48239b27f3924d60f8c53cb39dc7785" name="360-site-verification"/>
+    <style>
+        .com-meber-logined {
+            margin-right: 85px;
+        }
+
+        .header {
+            height: 50px;
+        }
+
+        .container {
+            width: 1290px;
+        }
+
+        .header .logo h1 img {
+            width: 140px;
+        }
+
+        .com-nav {
+            margin: 0 0 0 30px;
+        }
+
+        .com-nav dt a {
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            padding: 0 7px;
+        }
+
+        .com-nav a .arrow {
+            display: inline-block;
+            margin: 2.5px 0 0 5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #888 transparent transparent;
+            vertical-align: middle;
+        }
+    </style>
+    </link>
+    </link>
+    </meta>
+    </meta>
+    </meta>
+    </meta>
+    </meta>
+    </meta>
+    </meta>
+</head>
+<body>
+
+<style>
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 0 0 16px #645654; /*rgba(60,60,60,0.5)*/
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+
+    @-moz-keyframes spin {
+        0% {
+            -moz-transform: rotate(0)
+        }
+        100% {
+            -moz-transform: rotate(360deg)
+        }
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0)
+        }
+        100% {
+            -webkit-transform: rotate(360deg)
+        }
+    }
+
+    @-o-keyframes spin {
+        0% {
+            -o-transform: rotate(0)
+        }
+        100% {
+            -o-transform: rotate(360deg)
+        }
+    }
+
+    @-ms-keyframes spin {
+        0% {
+            -ms-transform: rotate(0)
+        }
+        100% {
+            -ms-transform: rotate(360deg)
+        }
+    }
+
+    .alpha-bg-w {
+        z-index: 9999;
+    }
+
+    .ind_96-top {
+        width: 1115px;
+        height: 35px;
+        background: #fafafa;
+        line-height: 35px;
+        margin-top: 10px;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-left: 0px;
+        margin-bottom: 5px;
+    }
+
+    .ind_96-top .red {
+        color: red;
+    }
+
+    .ind_96-top span {
+        font-size: 14px;
+        color: #29bc2c;
+        border-right: 1px solid #eaeaea;
+        padding: 0 16px;
+    }
+
+    .ind_96-top a {
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+        padding: 0 9px;
+    }
+</style>
+<!--content  -->
+<div class="content-wrap">
+    <div class="container container_index_width clearfix">
+        <!-- 左边内容 -->
+        <div class="content-l left">
+            <!-- 菜单 -->
+            <div class="tab-wrap">
+                <dl class="active">
+                    <dt>
+                        素材库
+                    </dt>
+                    <dd class="active" data="100" type="98">
+                        最新素材
+                    </dd>
+                    <dd data="17" type="1">
+                        默认素材
+                    </dd>
+                    <dd data="2" type="1">
+                        行业
+                    </dd>
+                    <dd data="3" type="1">
+                        节日
+                    </dd>
+                    <!--<dd data="103" type="98" style="color:red;">万圣节</dd>-->
+                    <!--	<dd data="102" type="98" style="color:red;">感恩节</dd>-->
+                </dl>
+                <dl>
+                    <dt data-tips="2">
+                        模板库
+                    </dt>
+                    <dd data="4" type="2">
+                        行业
+                    </dd>
+                    <dd data="5" type="2">
+                        节日
+                    </dd>
+                </dl>
+
+            </div>
+            <div class="content-l-box">
+                <div class="tab-item">
+                    <div class="con-box" id="choice">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 中间编辑器 -->
+        <div class="content-mid left">
+            <dl id="qianming">
+                <dt>
+                    <a href="javascript:;">
+                        使用签名
+                    </a>
+                </dt>
+                <dd>
+                    <a class="no-sign" href="javascript:;">
+                        不使用签名
+                    </a>
+                    <a href="/works/sign" target="_blank">
+                        管理签名
+                    </a>
+                </dd>
+            </dl>
+            <textarea class="content" edit="" id="container" name="content" required="">
+            </textarea>
+        </div>
+        <!-- 右边浮动按钮 -->
+        <ul class="content-r-nav">
+            <div class="colors-box">
+                <div class="colors-top clearfix">
+                    <h2>
+                        调色盘
+                    </h2>
+                    <span class="left">
+                        <span id="pickerBtn">
+                            <input class="colorPicker" id="picker" type="text" value="#60d295"/>
+                        </span>
+                    </span>
+                </div>
+                <div class="clearfix" id="colorCheck" style="line-height: 24px;">
+                    <label class="color-checkbox">
+                        <span class="checked" data-value="3" id="sci">
+                            <i class="active">
+                            </i>
+                            选中换色
+                        </span>
+                    </label>
+                    <label class="color-checkbox">
+                        <span class="" data-value="2" id="eci">
+                            <i class="">
+                            </i>
+                            全文换色
+                        </span>
+                    </label>
+                    <label class="color-checkbox">
+                        <span class="" data-value="1" id="mci">
+                            <i>
+                            </i>
+                            素材换色
+                        </span>
+                    </label>
+                </div>
+                <ul class="clearfix colors-list">
+                    <li class="color-swatch" color="#ac1d10" style="background-color: #ac1d10">
+                    </li>
+                    <li class="color-swatch" color="#d82821" style="background-color: #d82821;">
+                    </li>
+                    <li class="color-swatch" color="#ef7060" style="background-color: #ef7060;">
+                    </li>
+                    <li class="color-swatch" color="#fde2d8" style="background-color: #fde2d8;">
+                    </li>
+                    <li class="color-swatch" color="#d32a63" style="background-color: #d32a63;">
+                    </li>
+                    <li class="color-swatch" color="#eb6794" style="background-color: #eb6794;">
+                    </li>
+                    <li class="color-swatch" color="#f5bdd1" style="background-color: #f5bdd1;">
+                    </li>
+                    <li class="color-swatch" color="#ffebf0" style="background-color: #ffebf0;">
+                    </li>
+                    <li class="color-swatch" color="#e2561b" style="background-color: #e2561b;">
+                    </li>
+                    <li class="color-swatch" color="#ff8124" style="background-color: #ff8124;">
+                    </li>
+                    <li class="color-swatch" color="#fcb42b" style="background-color: #fcb42b;">
+                    </li>
+                    <li class="color-swatch" color="#feecaf" style="background-color: #feecaf;">
+                    </li>
+                    <li class="color-swatch" color="#0c8918" style="background-color: #0c8918;">
+                    </li>
+                    <li class="color-swatch" color="#80b135" style="background-color: #80b135;">
+                    </li>
+                    <li class="color-swatch" color="#c2c92a" style="background-color:#c2c92a;">
+                    </li>
+                    <li class="color-swatch" color="#e5f3d0" style="background-color:#e5f3d0;">
+                    </li>
+                    <li class="color-swatch" color="#374aae" style="background-color:#374aae;">
+                    </li>
+                    <li class="color-swatch" color="#1e9be8" style="background-color:#1e9be8;">
+                    </li>
+                    <li class="color-swatch" color="#59c3f9" style="background-color:#59c3f9;">
+                    </li>
+                    <li class="color-swatch" color="#b6e4fd" style="background-color:#b6e4fd;">
+                    </li>
+                    <!-- 紫色 -->
+                    <li class="color-swatch" color="#8d4bbb" style="background-color:#8d4bbb;">
+                    </li>
+                    <li class="color-swatch" color="#a65bcb" style="background-color:#a65bcb;">
+                    </li>
+                    <li class="color-swatch" color="#cca4e3" style="background-color:#cca4e3;">
+                    </li>
+                    <li class="color-swatch" color="#be7763" style="background-color:#be7763;">
+                    </li>
+                    <li class="color-swatch" color="#212122" style="background-color: #212122;">
+                    </li>
+                    <li class="color-swatch" color="#757576" style="background-color: #757576;">
+                    </li>
+                    <li class="color-swatch" color="#c6c6c7" style="background-color: #c6c6c7">
+                    </li>
+                    <li class="color-swatch" color="#f5f5f4" style="background-color: #f5f5f4">
+                    </li>
+                </ul>
+            </div>
+            <li class="wdl2">
+                保存／同步
+            </li>
+            <li class="wdl2">
+                同步到微信
+            </li>
+            <li class="_copyTo" id="fuzhi">
+                复制到微信
+            </li>
+            <li class="wdl2">
+                文章转长图
+            </li>
+            <li class="wdl2">
+                采集文章
+            </li>
+            <li class="_look">
+                预览
+            </li>
+            <li class="_empoty">
+                清空
+            </li>
+            <li class="wdl2" id="1">
+                缓存草稿
+            </li>
+            <li class="kefu">
+                客服二维码
+            </li>
+            <li class="kfewm">
+                <img src="/Public/style/tool/word/img/kfewm.jpg"/>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<!-- 文章采集 -->
+<div class="article-motal">
+    <div class="article-in">
+        <div class="article-top">
+            <h2>
+                文章采集
+            </h2>
+            <span class="close">
+                <i class="iconfont icon-cuowu">
+                </i>
+            </span>
+        </div>
+        <div class="article-con">
+            <div class="article-con-in clearfix">
+                <div class="left article-con-name">
+                    微信文章地址
+                </div>
+                <div class="left article-con-text">
+                    <input class="urls" name="urls" type="text"/>
+                </div>
+                <div class="left article-con-button">
+                    <button class="tq" type="submit">
+                        采集
+                    </button>
+                </div>
+            </div>
+            <div class="radio-in">
+                <ul>
+                    <li>
+                        <input checked="" name="cjtype" type="radio" value="1"/>
+                        <span>
+                            采集正文
+                        </span>
+                    </li>
+                    <li>
+                        <input name="cjtype" type="radio" value="2"/>
+                        <span>
+                            采集视频
+                        </span>
+                    </li>
+                    <li>
+                        <input name="cjtype" type="radio" value="3"/>
+                        <span>
+                            采集音频
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="article-dec">
+            <dl>
+                <dt>
+                    使用说明：
+                </dt>
+                <dd>
+                    1、微信文章必须是以http://mp.weixin.qq.com/s?src=开头的才可以
+                </dd>
+                <dd>
+                    2、点击“采集"按钮，采集视频链接网址，复制、粘贴到微信公众平台
+                </dd>
+                <dd>
+                    3、本采集功能，支持微信文章中有多个视频或者多个视频代码的文章
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<!-- 预览 -->
+<div class="phone-view" style="">
+    <div class="phone-view-body">
+        <section class="preview-phone" style="">
+            <span id="phone-close">
+                <i class="iconfont icon-cuowu">
+                </i>
+            </span>
+            <section class="preview-body">
+                <section class="preview-content">
+                </section>
+            </section>
+        </section>
+    </div>
+</div>
+<!--保存-->
+<div id="save-wrap">
+    <div class="save">
+        <div class="save-top">
+            <h2>
+                保存文档
+            </h2>
+            <i class="iconfont icon-cuowu close">
+            </i>
+        </div>
+        <dl class="clearfix choose tbbox1" style="display:none;">
+            <dt class="left">
+                存储选项
+            </dt>
+            <dd class="left one">
+                <span alt="2" class="active bcbox">
+                    覆盖原文
+                </span>
+                <span alt="1" class="bcbox ">
+                    另存为新的
+                </span>
+                <input class="bc" type="hidden">
+                </input>
+            </dd>
+        </dl>
+        <dl class="clearfix choose">
+            <dt class="left">
+                填写标题
+            </dt>
+            <dd class="left">
+                <input class="choose-inp title" name="title" placeholder="请填写标题" type="text"/>
+                <span class="red">
+                    *
+                </span>
+            </dd>
+        </dl>
+        <dl class="clearfix choose">
+            <dt class="left">
+                填写摘要
+            </dt>
+            <dd class="left">
+                <textarea class="left choose-area descs" cols="" name="descs" rows="">
+                </textarea>
+            </dd>
+        </dl>
+        <input class="bgid" type="hidden">
+        <input id="thumb" type="hidden" value=""/>
+        <input class="wtype" type="hidden"/>
+        <!--公众号授权后显示-->
+        <div class="set-pub active">
+            <dl class="clearfix choose urlbox">
+                <dt class="left">
+                    原文链接
+                </dt>
+                <dd class="left">
+                    <input class="line-input wxurl" placeholder="同步微信公众号，请填写原文链接" type="text" value="">
+                    </input>
+                </dd>
+            </dl>
+            <dl class="clearfix choose fm-dl">
+                <form id="uploadform">
+                    <input class="wpic" type="hidden" value=""/>
+                    <dt class="left">
+                        设置封面
+                    </dt>
+                    <dd class="left">
+                        <input class="fm-inp left uppic" placeholder="如需同步微信公众号，请上传封面图片" type="text">
+                        <a class="file-wrap" href="javascript:;">
+                            上传
+                            <input class="left file" id="pic2" name="upfile" type="file"/>
+                        </a>
+                        <div class="file-pic-show" style="display: none;">
+                            <img alt="" height="" id="img-show" src="" width="100"/>
+                        </div>
+                        </input>
+                    </dd>
+                </form>
+            </dl>
+        </div>
+        <dl class="clearfix choose set-pub">
+            <dt class="left">
+            </dt>
+            <dd class="left">
+                <a href="/mine/wechat/" style="color: #6ba7e9;font-size: 14px;">
+                    <i class="iconfont icon-weixin" style="color: green;margin-right: 8px;font-size: 20px;">
+                    </i>
+                    请先授权公众号才能进行同步保存，去授权
+                </a>
+            </dd>
+        </dl>
+        <dl class="clearfix choose" style="display:inline-block;">
+            <dt class="left">
+            </dt>
+            <dd class="left sub-btn">
+                <button alt="3" class="wz-btn add">
+                    保存为我的文章
+                </button>
+                <button alt="2" class="mb-btn add">
+                    保存到我的模板
+                </button>
+            </dd>
+        </dl>
+        </input>
+    </div>
+</div>
+<script src="/Public/style/tool/word/js/layer.js" ></script>
+<script src="/Public/style/tool/word/js/home.config.js?9"></script>
+<script src="/Public/style/tool/ueditor/ueditor.all.min.js?18"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/style/tool/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/Public/style/tool/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="/Public/style/tool/word/js/ZeroClipboard.min.js">
+</script>
+<script src="/Public/style/tool/word/js/preview.js">
+</script>
+<script src="/Public/style/tool/word/js/less.js">
+</script>
+<script src="/Public/style/tool/word/js/editor.js">
+</script>
+<script src="/Public/style/tool/word/js/color.js">
+</script>
+<script src="/Public/style/tool/word/js/color_exchange.js">
+</script>
+<script src="/Public/style/tool/word/js/96editor.js?3">
+</script>
+<script src="/Public/style/tool/word/js/xiuxiu.js">
+</script>
+<script src="/Public/style/tool/word/js/main.js?526">
+</script>
+<script src="/Public/style/tool/word/js/global.js">
+</script>
+<script src="/Public/style/tool/word/js/masonry.js">
+</script>
+<style>
+    .invitation {
+        width: 573px;
+        height: 545px;
+        display: block;
+        background: url(/assets/index/ad/pop_big_s.png) no-repeat center;
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        margin-left: -280px;
+        z-index: 9999;
+    }
+
+    .invitation .lk_in {
+        width: 135px;
+        height: 35px;
+        display: block;
+        border-radius: 20px;
+        background-image: linear-gradient(to bottom, #ffe5c6, #eab06e);
+        text-align: center;
+        line-height: 35px;
+        color: #f03838;
+        font-size: 22px;
+        position: absolute;
+        bottom: 50px;
+        right: 225px;
+        box-shadow: 0px 1px 1px 1px #ab0b0b;
+    }
+
+    .invitation .lk_gb {
+        width: 35px;
+        height: 35px;
+        display: block;
+        background: url(/assets/index/ad/pop_X.png) no-repeat center #f03838;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0px 0px 3px 1px #fff;
+        position: absolute;
+        right: 3px;
+    }
+
+    .invitation .lk-wm {
+        width: 40px;
+        height: 20px;
+        display: block;
+        background: #000;
+        opacity: 0.5;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 3px;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    .invitation .know {
+        line-height: 16px;
+        position: absolute;
+        bottom: 20px;
+        color: #fff;
+        right: 235px;
+    }
+
+    .invitation .know input {
+        width: 16px;
+        height: 16px;
+    }
+
+    .invitation .know i {
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $('.lk_gb').click(function () { /*鼠标点击事件*/
+            $('.pop').hide();
+        });
+        setTimeout("lazyGo();", 1000);
+    });
+
+    function lazyGo() {
+        var sec = $("#sec").text();
+        $("#sec").text(--sec);
+        if (sec > 0) {
+            setTimeout("lazyGo();", 1000);
+        } else {
+            $('.pop').hide();
+        }
+        if ($('.notc').is(":checked")) {
+            var d = new Date();
+            d.setTime(d.getTime() + (10 * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = "singles=1; " + expires;
+        }
+    }
+</script>
+
+<script src="/Public/style/tool/word/js/jquery.cookie.js">
+</script>
+<script>
+    $(function () {
+        if (location.hash == '#login') {
+            $('.login-motal-box').show();
+        }
+    });
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f677b3c87a55ab5f76e62b412244a2cd";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>

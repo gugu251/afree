@@ -54,16 +54,34 @@ class UploadController extends Controller
 			return array('status' => 2, 'message' => '图片格式不对！');
 		}
 
-		$path = APP_PUBLIC_UPLOAD . '/' . $name . '/' . date("Ymd");
-
 		$rand = rand(100, 999);
 		$pics = date("YmdHis") . $rand . '.' . $imgtype;
+		$path = APP_PUBLIC_UPLOAD . $name . '/' . date("Ymd");
 		$url = '/Public/upload/' . $name . '/' . date("Ymd") . '/' . $pics;
+		mkdirs($path);
 
 		move_uploaded_file($data['tmp_name'], $path . '/' . $pics);
+
 		$size = round($picsize / 1024, 2);
 
 		return array('status' => 1, 'message' => $url, 'size' => $size);
+	}
 
+	/**
+	 * 图片转存
+	 * @param $url
+	 * @param $name
+	 * @return mixed
+	 */
+	public function imgSavefile($url, $cate_id, $name = 'wxword')
+	{
+		$info = pathinfo($url);
+		$rand = rand(100, 999);
+		$pics = date("YmdHis") . $rand . '.' . $imgtype;
+		$path = APP_PUBLIC_UPLOAD . $name . '/' . $cate_id;
+		$url = '/Public/upload/' . $name . '/' . $cate_id . '/' . $pics;
+		mkdirs($path);
+		move_uploaded_file($url, $path . '/' . $pics);
+		return $urltt;
 	}
 }

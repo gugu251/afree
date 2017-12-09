@@ -61,6 +61,45 @@ function mkdirs($dir, $mode = 0777)
 }
 
 /**
+ * curl 函数
+ * @param $url
+ * @return mixed
+ */
+function getCurl($url)
+{
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_HEADER, false);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //如果把这行注释掉的话，就会直接输出
+	$result = curl_exec($ch);
+	curl_close($ch);
+	return $result;
+}
+
+/**
+ * 图片转存
+ * @param $url
+ * @param $name
+ * @return mixed
+ * getimagesize("http://newcdn.96weixin.com/=png"): failed to open stream: No such file or directory in
+ */
+function imgSavefile($url, $cate_id = '1', $name = 'wxword')
+{
+	$info = getimagesize($url);
+	$imgtype = explode('/', $info['mime']);
+	$img_data = file_get_contents($url);
+
+	$rand = rand(100, 999);
+	$pics = date("YmdHis") . $rand . '.' . $imgtype['1'];
+	$path = APP_PUBLIC_UPLOAD . $name . '/' . $cate_id;
+	$url = '/Public/upload/' . $name . '/' . $cate_id . '/' . $pics;
+	mkdirs($path);
+	file_put_contents($path . '/' . $pics, $img_data);
+	return $url;
+}
+
+
+/**
  * 成功返回
  * @param string $msg
  * @param int $code
