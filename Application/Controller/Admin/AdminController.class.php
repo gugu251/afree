@@ -7,6 +7,9 @@ class AdminController extends Controller {
      */
     public function __construct() {
         parent::__construct();
+		if(!$_SESSION['admin_uid']){
+			header('Location: http://www.ccc.com/admin/login/login');
+		}
         $menus = (new AdminmenuModel)->getMenuList();
         $this->assign('menus', $menus);
 

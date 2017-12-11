@@ -8,6 +8,9 @@
  */
 class UploadController extends Controller
 {
+	/*
+	 * 多张图片上传
+	 */
 	public function imgUpload()
 	{
 		if (count($_FILES) > 0) {
@@ -26,6 +29,25 @@ class UploadController extends Controller
 		);
 		echo json_encode($arr);
 	}
+
+	/**
+	 * 单张图片上传
+	 */
+	public function imgUploadOne()
+	{
+		if (count($_FILES) > 0) {
+			$urlArr = array();
+			foreach ($_FILES as $key => $val) {
+				$reArr = $this->imgtofile($val);
+				if ($reArr['status'] == 1) {
+					$urlArr[] = $reArr['message'];
+				}
+			}
+		}
+
+		echo $urlArr[0];
+	}
+
 
 	/**
 	 * 图片上传
@@ -55,7 +77,7 @@ class UploadController extends Controller
 		}
 
 		$rand = rand(100, 999);
-		$pics = date("YmdHis") . $rand . '.' . $imgtype;
+		$pics = time() . $rand . '.' . $imgtype;
 		$path = APP_PUBLIC_UPLOAD . $name . '/' . date("Ymd");
 		$url = '/Public/upload/' . $name . '/' . date("Ymd") . '/' . $pics;
 		mkdirs($path);
@@ -77,7 +99,7 @@ class UploadController extends Controller
 	{
 		$info = pathinfo($url);
 		$rand = rand(100, 999);
-		$pics = date("YmdHis") . $rand . '.' . $imgtype;
+		$pics = time() . $rand . '.' . $imgtype;
 		$path = APP_PUBLIC_UPLOAD . $name . '/' . $cate_id;
 		$url = '/Public/upload/' . $name . '/' . $cate_id . '/' . $pics;
 		mkdirs($path);

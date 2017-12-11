@@ -20,4 +20,14 @@ class NewsCateModel extends Model
 		$item = $this->selectAll();
 		return $item;
 	}
+
+	/**
+	 * 获取分类名
+	 */
+	public function getNameById($cate_id)
+	{
+		$where['id'] = $cate_id;
+		$info = $this->where($where)->find();
+		return $info['name'];
+	}
 }

@@ -28,27 +28,27 @@
         <!--{foreach $news item='list'}-->
         <li>
             <div class="am-gallery-item am_list_block">
-                <a class="am_img_bg" href="###">
-                    <img alt="" class="am_img animated" data-original="<!--{$list['news_thumb']}-->" src="<!--{$list['news_thumb']}-->"/>
+                <a class="am_img_bg" href="/index/news/newsdetail?id=<!--{$list['id']}-->">
+                    <img alt="" class="am_img animated" data-original="<!--{$list['thumb']}-->" src="<!--{$list['thumb']}-->"/>
                 </a>
                 <div class="am_listimg_info">
                     <span class="am-icon-heart">
-                        132
+                        <!--{$list['like_num']}-->
                     </span>
                     <span class="am-icon-comments">
-                        67
+                        <!--{$list['comment_num']}-->
                     </span>
                     <span class="am_imglist_time">
-                        15分钟前
+                        <!--{$list['date_time']}-->
                     </span>
                 </div>
             </div>
             <a class="am_imglist_user">
                 <span class="am_imglist_user_ico">
-                    <img alt="" src="/Public/style/home/img/tx.jpg"/>
+                    <img alt="" src="<!--{$list['user_avatar']}-->"/>
                 </span>
                 <span class="am_imglist_user_font">
-                    <!--{$list['news_title']}-->
+                    <!--{$list['title']}-->
                 </span>
             </a>
         </li>

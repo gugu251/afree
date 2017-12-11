@@ -20,14 +20,14 @@
                 <div class="portlet-input input-small input-inline">
                     <div class="input-icon right">
                         <i class="am-icon-search"></i>
-                        <input type="text" class="form-control form-control-solid" placeholder="搜索...">
-                    </div>
+                        <input type="text" class="form-control form-control-solid" placeholder="搜索..."></div>
                 </div>
             </div>
         </div>
         <div class="tpl-block ">
 
             <div class="am-g tpl-amazeui-form">
+
 
                 <div class="am-u-sm-12 am-u-md-9">
                     <form class="am-form am-form-horizontal">
@@ -57,12 +57,13 @@
                         </div>
 
                         <div class="am-form-group">
+
                             <label for="user-weibo" class="am-u-sm-3 am-form-label">封面图</label>
                             <div class="am-u-sm-9">
                                 <div class="am-form-group am-form-file">
                                     <div id="feedback" class="tpl-form-file-img">
                                         <img src="<!--{$news['thumb']}-->" alt="">
-                                        <input type='hidden' class="mynews_thumb" name='thumb' value="<!--{$news['thumb']}-->">
+                                        <input type='text' class="mynews_thumb" name='thumb' value="<!--{$news['thumb']}-->">
                                     </div>
                                     <button type="button" class="am-btn am-btn-danger am-btn-sm">
                                         <i class="am-icon-cloud-upload"></i> 添加封面图片
@@ -72,11 +73,13 @@
                             </div>
                         </div>
 
+
                         <div class="am-form-group">
                             <label for="user-intro" class="am-u-sm-3 am-form-label">内容</label>
                             <div class="am-u-sm-9">
-                                <!-- 加载编辑器的容器 -->
-                                <script id="container" name="mynews_content" style="height:500px;" type="text/plain"><!--{$news['content']}--></script>
+                                <div id="div1" class="mynews_content">
+                                    <!--{$news['content']}-->
+                                </div>
                             </div>
                         </div>
 
@@ -94,15 +97,26 @@
 
 
 </div>
-
-<!-- 配置文件 -->
-<script type="text/javascript" src="/Public/style/tool/ueditor/ueditor.config.js"></script>
-<!--编辑器源码文件-->
-<script type="text/javascript" src="/Public/style/tool/ueditor/ueditor.all.js"></script>
-<!-- 实例化编辑器 -->
+<!-- 引用js -->
+<script type="text/javascript" src="/Public/style/admin/wangEditor/wangEditor.js"></script>
 <script type="text/javascript">
-    var ue = UE.getEditor('container');
 
+    var E = window.wangEditor;
+    var editor = new E('#div1');
+    // 自定义菜单配置
+    editor.customConfig.menus = [
+        'head',  // 标题
+        'bold',  // 粗体
+        'justify',  // 对齐方式
+        'image',  // 插入图片
+        'video',  // 插入视频
+        'code',  // 插入代码
+    ]
+    editor.customConfig.uploadImgShowBase64 = true; // 使用 base64 保存图片
+    editor.customConfig.uploadImgServer = '/tool/upload/imgupload'; // 上传图片到服务器
+//    editor.config.height = 'auto';
+    editor.create();
+    //图片上传
     $(document).ready(function(){
         //响应文件添加成功事件
         var feedback = $("#feedback");
@@ -146,17 +160,10 @@
         var cate_id = $(".mynews_cate_id").val();
         var desc = $("#user-intro").val();
         var thumb = $(".mynews_thumb").val();
-        var content = ue.getContent();
         // 获取编辑区域的html
-//        var content = html;
+        var content = $(".w-e-text").html();
 
-        alert(title);
-        alert(cate_id);
-        alert(desc);
-        alert(thumb);
-        alert(content);
-
-        $.post('/admin/news/postedit', {"title": title,"cate_id": cate_id}, function (data) {
+        $.post('/admin/news/postedit', {"title": title,"cate_id": cate_id,"desc": desc,"thumb": thumb,"content": content,"id":<!--{$news['id']}-->}, function (data) {
             if (data.status == 200) {
                 alert(data.message);
             } else {

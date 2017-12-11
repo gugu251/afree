@@ -27,15 +27,11 @@
                 Afree用户登录
             </div>
         </div>
-        <div class="login-font">
-            <i><a href="/index/index/login">登陆</a></i> or <span><a href="/index/index/register">注册</a></span>
-        </div>
-
         <div class="am-u-sm-10 login-am-center">
             <form class="am-form">
                 <fieldset>
                     <div class="am-form-group">
-                        <input type="number" class="uu_mobile" id="doc-ipt-mobile-1" placeholder="输入手机号">
+                        <input type="text" class="uu_mobile" id="doc-ipt-mobile-1" placeholder="输入手机号">
                     </div>
                     <div class="am-form-group">
                         <input type="password" class="uu_password" id="doc-ipt-pwd-1" placeholder="输入密码">
@@ -56,9 +52,10 @@
     $('.uu_submit').click(function () {
         var mobile = $("#doc-ipt-mobile-1").val();
         var pass = $("#doc-ipt-pwd-1").val();
-        $.post('/index/index/postlogin', {"mobile": mobile,"password": pass}, function (data) {
+        $.post('/admin/login/postlogin', {"name": mobile,"password": pass}, function (data) {
             if (data.status == 200) {
                 alert(data.message);
+                window.location.href="/admin/index/index";
             } else {
                 alert(data.message);
             }

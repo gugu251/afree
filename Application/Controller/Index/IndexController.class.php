@@ -20,12 +20,21 @@ class IndexController extends BaseController
 	 */
 	public function newslist()
 	{
-		$items = (new NewsModel)->getList(1);
-
+		$list = (new NewsModel)->getList($where);
 		$this->assign('title', '图文列表页');
-		$this->assign('news', $items);
-//      exit;
+		$this->assign('news', $list);
 		$this->display('Index/News/newslist.html');
+	}
+
+	/**
+	 * 新闻详情页
+	 */
+	public function newsdetail(){
+		$id = $_GET['id'];
+		$info = (new NewsModel)->getOne($id);
+		$this->assign('title', '图文详情页');
+		$this->assign('news', $info);
+		$this->display('Index/News/newsDetail.html');
 	}
 
 	/**

@@ -82,12 +82,12 @@ class UserModel extends Model
 			if ($info['password'] != md5($password)) {
 				error('密码错误');
 			}
+			return $info;
 		} else {
 			if ($info['user_id']) {
 				error('用户已存在');
 			}
+			return true;
 		}
-
-		return $info;
 	}
 }

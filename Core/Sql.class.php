@@ -35,7 +35,7 @@ class Sql
 				$count = count($wheres);
 				$arr = array();
 				foreach ($where as $key => $value) {
-					$tip = "$key=$value ";
+					$tip = "$key='{$value}'";
 					array_push($arr, $tip);
 				}
 				$this->filter .= implode(' and ', $arr);
@@ -56,7 +56,6 @@ class Sql
 	public function page($page = 1, $limit = 10)
 	{
 		$start = ($page - 1) * $page;
-
 		if (isset($order)) {
 			$this->filter .= ' limit ' . $start . ',' . $limit;
 		}
@@ -71,7 +70,6 @@ class Sql
 			$this->filter .= ' ORDER BY ';
 			$this->filter .= implode(',', $order);
 		}
-
 		return $this;
 	}
 
@@ -79,7 +77,7 @@ class Sql
 	public function find()
 	{
 		$sql = sprintf("select * from `%s` %s", $this->_table, $this->filter);
-
+//		var_dump($sql);
 		$sth = $this->_dbHandle->prepare($sql);
 		$sth->execute();
 
@@ -122,7 +120,7 @@ class Sql
 	{
 		$sth = $this->_dbHandle->prepare($sql);
 		$sth->execute();
-
+//		var_dump($sth);
 		return $sth->rowCount();
 	}
 
@@ -130,7 +128,6 @@ class Sql
 	public function add($data)
 	{
 		$sql = sprintf("insert into `%s` %s", $this->_table, $this->formatInsert($data));
-
 		return $this->query($sql);
 	}
 

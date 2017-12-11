@@ -29,6 +29,7 @@ class TranslateController extends Controller
         //语言
         $language = trim($_POST['language']);
         $data = trim($_POST['content']);
+
         if ($data) {
             //正则匹配所有中文 仅限中文
             $list = preg_match_all("#(?:(?![，。？])[\xC0-\xFF][\x80-\xBF]+)+#", $data, $arr, PREG_PATTERN_ORDER);
@@ -50,9 +51,7 @@ class TranslateController extends Controller
             //去除重复
             $uniqueArr = array_unique($tmpArr);
 
-
             //语言
-//            $languageArr = array('en', 'ja', 'ko', 'fr', 'zh_Hant');
             $tr = new TranslateClient();
             $tr->setSource('zh'); // Translate from English
 
@@ -62,6 +61,7 @@ class TranslateController extends Controller
             foreach ($uniqueArr as $key => $value) {
                 $translate[] = trim($tr->translate($value));
             }
+
             $kk = str_replace($uniqueArr, $translate, $data);
 
         }
@@ -83,9 +83,9 @@ class TranslateController extends Controller
         $data = trim($_POST['content']);
         //语言
         $language = trim($_POST['language']);
+
         $data = trim($_POST['content']);
         if ($data) {
-
             $tr = new TranslateClient();
             $tr->setSource('zh');
             $tr->setTarget($language);
